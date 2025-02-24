@@ -1,0 +1,4 @@
+Patient ID,Doctor,Date,Time,Status
+101,Dr. Smith,2024-02-20,10:00 AM,Completed
+102,Dr. Brown,2024-02-21,11:30 AM,Upcoming
+103,Dr. Lee,2024-02-22,02:00 PM,Completed
