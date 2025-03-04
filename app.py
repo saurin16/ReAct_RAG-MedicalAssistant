@@ -13,19 +13,16 @@ st.title("🩺 ReAct RAG-based Medical Assistant")
 
 # API Key Inputs
 openai_api_key = st.text_input("🔑 Enter your OpenAI API Key", type="password")
-athina_api_key = st.text_input("🔑 Enter your Athina API Key", type="password")
 
 # Function to mask API keys for security
 def mask_api_key(api_key):
     return api_key[:4] + "*" * (len(api_key) - 8) + api_key[-4:] if api_key else ""
 
-if openai_api_key and athina_api_key:
+if openai_api_key:
     os.environ['OPENAI_API_KEY'] = openai_api_key
-    os.environ['ATHINA_API_KEY'] = athina_api_key
 
     st.text(f"✅ OpenAI Key Loaded: {mask_api_key(openai_api_key)}")
-    st.text(f"✅ Athina Key Loaded: {mask_api_key(athina_api_key)}")
-
+   
     # File Uploaders
     st.subheader("📂 Upload Patient Data")
     appointment_file = st.file_uploader("📅 Upload Appointments CSV", type=["csv"])
