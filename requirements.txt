@@ -4,3 +4,9 @@ langgraph
 pypdf 
 athina-client
 langchain
+streamlit
+langchain-openai
+langchain-community
+faiss-cpu
+PyPDF2
+openai
